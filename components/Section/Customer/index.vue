@@ -1,7 +1,9 @@
 <template>
-  <div class="flex items-center justify-between">
-    <div class="block" v-for="(item, index) in customer" :key="index">
-      <img :src="item.src" alt="" />
+  <div class="customer">
+    <div class="flex items-center justify-between">
+      <div class="block" v-for="(item, index) in customer" :key="index">
+        <img :src="item.src" alt="" />
+      </div>
     </div>
   </div>
 </template>

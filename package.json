@@ -26,6 +26,7 @@
     "fibers": "^5.0.0",
     "postcss": "^8.2.8",
     "sass": "^1.32.12",
-    "sass-loader": "^10.1.1"
+    "sass-loader": "^10.1.1",
+    "tailwindcss-pseudo-elements": "^2.0.0"
   }
 }

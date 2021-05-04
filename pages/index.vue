@@ -2,17 +2,26 @@
   <div id="app">
     <Hero />
     <Customer />
+    <Chart />
+    <Card />
+    <PriceBox />
   </div>
 </template>
 
 <script>
 import Hero from '@/components/Section/Hero'
 import Customer from '@/components/Section/Customer'
+import Chart from '@/components/Section/Chart'
+import Card from '@/components/Section/Cards'
+import PriceBox from '@/components/Section/Pricing'
 export default {
   name: 'app',
   components: {
     Hero,
-    Customer
+    Customer,
+    Chart,
+    Card,
+    PriceBox
   }
 }
 </script>
