@@ -1,41 +1,44 @@
 <template>
-  <div class="customer">
-    <div class="flex items-center justify-between">
-      <div class="block" v-for="(item, index) in customer" :key="index">
-        <img :src="item.src" alt="" />
+  <div class="customer  py-10 pl-6 pr-10 grid grid-cols-3 mx-auto items-center row-start-1">
+      <div class="mt-6 ml-5 " v-for="(item, index) in customer" :key="index">
+       <nuxt-link :to="item.link" class="w-16" >
+          <img :src="item.src" :alt="item.alt" class="cursor-pointer w-28" />
+       </nuxt-link>
       </div>
-    </div>
   </div>
 </template>
 
 <script>
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+// optional style for arrows & dots
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 export default {
+  components: { VueSlickCarousel },
+  data() {
+    return{
+      customer:[]
+    }
+  },
+    async fetch() {
+    this.customer = await fetch("http://localhost:3000/customer").then((res) =>
+      res.json()
+    );
+  },
   props: {
-    customer: {
-      type: Array,
+    settings: {
+      type: Object,
+      require: true,
       default() {
-        return [
-          {
-            id: 1,
-            src: "/image/customer-1.png",
-          },
-          {
-            id: 2,
-            src: "/image/customer-2.png",
-          },
-          {
-            id: 3,
-            src: "/image/customer-3.png",
-          },
-          {
-            id: 4,
-            src: "/image/customer-4.png",
-          },
-          {
-            id: 5,
-            src: "/image/customer-5.png",
-          },
-        ];
+        return {
+          dots: false,
+          dotsClass: "slick-dots custom-dot-class",
+          edgeFriction: 0.35,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        };
       },
     },
   },

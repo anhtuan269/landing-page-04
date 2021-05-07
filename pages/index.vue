@@ -9,21 +9,31 @@
 </template>
 
 <script>
-import Hero from '@/components/Section/Hero'
-import Customer from '@/components/Section/Customer'
-import Chart from '@/components/Section/Chart'
-import Card from '@/components/Section/Cards'
-import PriceBox from '@/components/Section/Pricing'
+import Hero from "@/components/Section/Hero";
+import Customer from "@/components/Section/Customer";
+import Chart from "@/components/Section/Chart";
+import Card from "@/components/Section/Cards";
+import PriceBox from "@/components/Section/Pricing";
 export default {
-  name: 'app',
+  name: "app",
+  data() {
+    return {
+      head1: [],
+    };
+  },
+  async fetch() {
+    this.head1 = await fetch("http://localhost:3000/hero").then((res) =>
+      res.json()
+    );
+  },
   components: {
     Hero,
     Customer,
     Chart,
     Card,
-    PriceBox
-  }
-}
+    PriceBox,
+  },
+};
 </script>
 
 <style>
@@ -42,16 +52,8 @@ export default {
 }
 
 .title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;

@@ -1,17 +1,20 @@
 <template>
-  <div class="card">
-    <div class="flex justify-center items-center">
-      <div class="item">
-        <img src="@/static/image/Icon 001.png" alt="" />
-        <Heading :head="head" />
-      </div>
-      <div class="item">
-        <img src="@/static/image/Icon 002.png" alt="" />
-        <Heading :head="head1" />
-      </div>
-      <div class="item">
-        <img src="@/static/image/Icon 003.png" alt="" />
-        <Heading :head="head2" />
+  <div class="card px-10 py-16">
+    <div class="block  lg:flex justify-center items-center">
+      <div class="item mb-10" v-for="(card, index) in cards" :key="index">
+        <img
+          :src="card.card_image"
+          :alt="card.card_alt"
+          class="w-40 mx-auto mb-3"
+        />
+        <div class="text-center">
+          <h2 class="text-24 text-black-01 font-bold leading-l-24">
+            {{ card.card_title }}
+          </h2>
+          <p class="text-16 leading-l-22 mt-4 w-80 mx-auto">
+            {{ card.card_description }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -25,34 +28,13 @@ export default {
   },
   data() {
     return {
-      head: {
-        big: false,
-        normal: false,
-        small: true,
-        big_special: false,
-        title: "Benchmarks",
-        content:
-          "See how you stack up against comparable companies in similar stages.",
-      },
-      head1: {
-        big: false,
-        normal: false,
-        small: true,
-        big_special: false,
-        title: "IPricing Audit",
-        content:
-          "Benchmark the health of your monetization and pricing strategy.",
-      },
-      head2: {
-        big: false,
-        normal: false,
-        small: true,
-        big_special: false,
-        title: "Retention Audit",
-        content:
-          "Audit where revenue leakage exists and where you can increase retention.",
-      },
+      cards: [],
     };
+  },
+  async fetch() {
+    this.cards = await fetch("http://localhost:3000/cards").then((res) =>
+      res.json()
+    );
   },
 };
 </script>

@@ -28,21 +28,25 @@ module.exports = {
       },
       textColor: {
         'new-blue': '#5454d4',
-        'black-01': '19191B',
+        'black-01': '#19191B',
         'orange': '#ff7143',
       },
       borderColor: {
-        'blue': '#5454d4'
+        'blue': '#5454d4',
+        'ground':'#9F3919'
       },
       borderRadius: {
         '20':'20px',
         '10':'10px'
       },
       lineHeight: {
+        'l-14':'14px',
+        'l-16': '16px',
         'l-22': '22px',
         'l-24': '24px',
         'l-28': '28px',
         'l-30': '30px',
+        'l-40':'40px',
         'l-50': '50px',
         'l-57': '57px',
         'l-60': '60px',
@@ -98,6 +102,6 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    
+  
   ],
 }
