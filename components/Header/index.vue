@@ -9,7 +9,7 @@
       <ul
         class="hidden md:flex md:items-center md:justify-center before:empty-content"
       >
-        <li v-for="(item, index) in menu" :key="index" class="ml-10 font-bold ">
+        <li v-for="(item, index) in menu" :key="index" class="ml-10 font-bold hover:text-black-01 duration-500 ease-linear ">
           <nuxt-link :to="item.link" class="py-4">
             {{ item.text }}
           </nuxt-link>

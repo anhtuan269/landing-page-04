@@ -9,7 +9,7 @@
        v-for="(item, index) in button" 
        :key="index" 
        v-show="item.backgoundColor==='blue'"
-       class=" bg-blue w-40 h-12 text-white font-semibold rounded-l-xl "
+       class=" bg-blue w-40 h-12 text-white font-semibold rounded-l-xl  focus:outline-none "
        v-bind:class="{ blue, gray}"
        >
          {{item.text}}
@@ -18,7 +18,7 @@
        v-for="(item, index) in button" 
        :key="index" 
        v-show="item.backgoundColor==='white'"
-       class="bg-gray-100 w-40 h-12 text-black-01 font-semibold rounded-r-xl hover:bg-blue hover:text-white duration-500 ease-linear"
+       class="bg-gray-100 w-40 h-12 text-black-01 font-semibold rounded-r-xl hover:bg-blue hover:text-white duration-500 ease-linear  focus:outline-none"
        >
          {{item.text}}
        </button>

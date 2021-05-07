@@ -14,13 +14,13 @@
       >
         {{ head.title }}
       </h2>
-      <p class="text-16 leading-l-22 mt-4 text-center  md:text-left md:text-18 md:leading-l-22 lg:text-20 lg:leading-l-30 lg:w-10/12">
+      <p class="text-16 leading-l-22 mt-4 text-center  md:text-left md:text-18 md:leading-l-22 lg:text-20 lg:leading-l-30 lg:w-10/12 2xl:w-7/12">
         {{ head.description }}
       </p>
     </div>
     <div class="flex mt-10 justify-center md:justify-start">
       <button
-        class="bg-blue text-white font-bold text-14 leading-l-14 tracking-c rounded-10 px-04 py-01 hover:bg-orange duration-500 ease-in-out mr-4 md:text-16"
+        class="bg-blue text-white font-bold text-14 leading-l-14 tracking-c rounded-10 px-04 py-01 hover:bg-orange focus:outline-none duration-500 ease-linear  mr-4 md:text-16 "
         v-for="(item, index) in button"
         :key="index"
         v-show="item.backgoundColor ==='orange'"
@@ -87,8 +87,8 @@
       </div>
     </div>
    </div>
-    <div class="mt-10 mx-auto md:w-6/12 lg:w-5/12 lg:ml-auto">
-      <img :src="image.img" alt=" "  />
+    <div class="mt-10 mx-auto md:w-6/12 lg:w-5/12  2xl:w-6/12">
+      <img :src="image.img" alt=" " class="ml-auto" />
     </div>
   </div>
   </div>

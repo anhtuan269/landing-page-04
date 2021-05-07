@@ -1,6 +1,6 @@
 <template>
   <div class="pricing-box mt-10 ">
-    <div class=" lg:flex items-center justify-center">
+    <div class=" lg:flex items-center justify-center max-w-1300 mx-auto">
       <div
         class="bg-gray-100 mt-10 text-center py-8 px-8 rounded-10 w-330 mx-auto"
         v-for="(item, index) in pricing"
@@ -14,7 +14,7 @@
           <p class="text-18 leading-l-40 ">{{ item.option_2 }}</p>
           <p class="text-18 leading-l-40 ">{{ item.option_3 }}</p>
         </div>
-        <button class="mt-5 bg-white w-full rounded-xl border-2 border-white border-solid py-4 font-bold text-new-blue hover:text-white hover:bg-blue duration-500 ease-in-out">
+        <button class="mt-5 bg-white w-full rounded-xl border-2 border-white border-solid py-4 font-bold text-new-blue hover:text-white hover:bg-blue duration-500 ease-in-out focus:outline-none">
           <nuxt-link :to="item.link">
             {{ item.text_link }}
           </nuxt-link>
@@ -35,7 +35,7 @@
           <p class="text-18 leading-l-40 ">{{ item.option_2 }}</p>
           <p class="text-18 leading-l-40 ">{{ item.option_3 }}</p>
         </div>
-        <button class="mt-5 bg-ground w-full rounded-xl border-2 border-ground border-solid py-4 font-bold text-white hover:bg-blue duration-500 ease-in-out">
+        <button class="mt-5 bg-ground w-full rounded-xl border-2 border-ground border-solid py-4 font-bold text-white hover:bg-blue hover:border-blue duration-500 ease-in-out focus:outline-none">
           <nuxt-link :to="item.link">
             {{ item.text_link }}
           </nuxt-link>
@@ -56,7 +56,7 @@
           <p class="text-18 leading-l-40 ">{{ item.option_2 }}</p>
           <p class="text-18 leading-l-40 ">{{ item.option_3 }}</p>
         </div>
-        <button class="mt-5 bg-white w-full rounded-xl border-2 border-white border-solid py-4 font-bold text-new-blue hover:text-white hover:bg-blue duration-500 ease-in-out">
+        <button class="mt-5 bg-white w-full rounded-xl border-2 border-white border-solid py-4 font-bold text-new-blue hover:text-white hover:bg-blue duration-500 ease-in-out  focus:outline-none">
           <nuxt-link :to="item.link">
             {{ item.text_link }}
           </nuxt-link>
