@@ -1,5 +1,5 @@
 <template>
-  <div class="customer  py-10 pl-6 pr-10 grid grid-cols-3 mx-auto items-center row-start-1">
+  <div class="customer  py-10 pl-6 pr-10 grid grid-cols-3 mx-auto items-center row-start-1 md:pl-24">
       <div class="mt-6 ml-5 " v-for="(item, index) in customer" :key="index">
        <nuxt-link :to="item.link" class="w-16" >
           <img :src="item.src" :alt="item.alt" class="cursor-pointer w-28" />

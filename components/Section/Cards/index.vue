@@ -1,6 +1,6 @@
 <template>
   <div class="card px-10 py-16">
-    <div class="block  lg:flex justify-center items-center">
+    <div class="  lg:flex lg:justify-between lg:items-center">
       <div class="item mb-10" v-for="(card, index) in cards" :key="index">
         <img
           :src="card.card_image"

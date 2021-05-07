@@ -2,7 +2,7 @@
   <div class="pricing-box mt-10">
     <div class=" lg:flex items-center justify-center">
       <div
-        class="bg-gray-100 mt-10 text-center py-8 px-8 rounded-10"
+        class="bg-gray-100 mt-10 text-center py-8 px-8 rounded-10 w-330 mx-auto"
         v-for="(item, index) in pricing"
         :key="index"
         v-show="(item.package === 'Starter')"
@@ -21,7 +21,7 @@
         </button>
       </div>
       <div
-        class="bg-orange text-white mt-10 text-center py-14 rounded-10 px-8" 
+        class="bg-orange text-white mt-10 text-center py-14 rounded-10 px-8 w-330 mx-auto" 
         v-for="(item, index) in pricing"
         :key="index"
         v-show="(item.package === 'Premium')"
@@ -42,7 +42,7 @@
         </button>
       </div>
       <div
-        class="bg-gray-100 mt-10 text-center py-8 rounded-10 px-8"
+        class="bg-gray-100 mt-10 text-center py-8 rounded-10 px-8 w-330 mx-auto"
         v-for="(item, index) in pricing"
         :key="index"
         v-show="(item.package === 'Enterprise')"

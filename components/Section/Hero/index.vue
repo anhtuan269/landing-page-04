@@ -1,27 +1,29 @@
 <template>
   <div class="hero px-10">
     <Header />
-    <div
+  <div class="hero md:flex md:items-center md:justify-between md:mt-14">
+     <div class="heading md:w-5/12">
+      <div
       class="mt-10"
       v-for="(head, index) in heading"
       :key="index"
       v-show="head.type === 'text'"
     >
       <h2
-        class="text-34 leading-l-30 tracking-a font-bold text-black-01 text-center"
+        class="text-34 leading-l-30 tracking-a font-bold text-black-01 text-center  md:text-left md:text-42 md:leading-l-40"
       >
         {{ head.title }}
       </h2>
-      <p class="text-16 leading-l-22 mt-4 text-center">
+      <p class="text-16 leading-l-22 mt-4 text-center  md:text-left md:text-18 md:leading-l-22">
         {{ head.description }}
       </p>
     </div>
-    <div class="flex mt-10 justify-center">
+    <div class="flex mt-10 justify-center md:justify-start">
       <button
-        class="bg-blue text-white font-bold text-14 leading-l-14 tracking-c rounded-10 px-04 py-01 hover:bg-orange duration-500 ease-in-out mr-4"
+        class="bg-blue text-white font-bold text-14 leading-l-14 tracking-c rounded-10 px-04 py-01 hover:bg-orange duration-500 ease-in-out mr-4 md:text-16"
         v-for="(item, index) in button"
         :key="index"
-        v-show="item.backgoundColor === 'orange'"
+        v-show="item.backgoundColor ==='orange'"
       >
         {{ item.text }}
       </button>
@@ -84,9 +86,11 @@
         </svg>
       </div>
     </div>
-    <div class="mt-10 mx-auto">
-      <img :src="image.img" alt=" " />
+   </div>
+    <div class="mt-10 mx-auto md:w-6/12">
+      <img :src="image.img" alt=" " class="w-full" />
     </div>
+  </div>
   </div>
 </template>
 
