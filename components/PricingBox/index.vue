@@ -1,5 +1,5 @@
 <template>
-  <div class="pricing-box mt-10">
+  <div class="pricing-box mt-10 ">
     <div class=" lg:flex items-center justify-center">
       <div
         class="bg-gray-100 mt-10 text-center py-8 px-8 rounded-10 w-330 mx-auto"
@@ -8,7 +8,7 @@
         v-show="(item.package === 'Starter')"
       >
         <h3 class="text-18 leading-l-24 tracking-a mb-2">{{ item.package }}</h3>
-        <h3 class="price text-42 leading-l-50 text-black-01 font-bold mb-4">{{ item.money }}</h3>
+        <h3 class="price text-42 leading-l-50 text-black-01 font-bold mb-4 lg:text-50">{{ item.money }}</h3>
         <div class="options">
           <p class="text-18 leading-l-40 ">{{ item.option_1 }}</p>
           <p class="text-18 leading-l-40 ">{{ item.option_2 }}</p>
@@ -27,8 +27,8 @@
         v-show="(item.package === 'Premium')"
       >
         <h3 class="text-18 leading-l-24 tracking-a mb-2">{{ item.package }}</h3>
-        <h3 class="price price text-42 leading-l-50 font-bold mb-4">{{ item.money }}
-          <span class="text-25 leading-l-24 ">{{item.time}}</span>
+        <h3 class="price price text-42 leading-l-50 font-bold mb-4 lg:text-50">{{ item.money }}
+          <span class="text-25 leading-l-24 lg:text-28 lg:leading-l-30">{{item.time}}</span>
         </h3>
         <div class="options">
           <p class="text-18 leading-l-40 ">{{ item.option_1 }}</p>
@@ -48,8 +48,8 @@
         v-show="(item.package === 'Enterprise')"
       >
         <h3 class="name text-18 leading-l-24 tracking-a mb-2 ">{{ item.package }}</h3>
-        <h3 class="price price text-42 leading-l-50 text-black-01 font-bold mb-4">{{ item.money }}
-          <span class="text-25 leading-l-24 ">{{item.time}}</span>
+        <h3 class="price price text-42 leading-l-50 text-black-01 font-bold mb-4 lg:text-50">{{ item.money }}
+          <span class="text-25 leading-l-24 lg:text-28 lg:leading-l-30 ">{{item.time}}</span>
         </h3>
         <div class="options">
           <p class="text-18 leading-l-40 ">{{ item.option_1 }}</p>

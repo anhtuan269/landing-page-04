@@ -1,8 +1,8 @@
 <template>
-  <div class="hero px-10">
+  <div class="hero px-10 lg:max-w-tablet lg:px-0 lg:mx-auto 1360:max-w-1300 2xl:max-w-1500">
     <Header />
   <div class="hero md:flex md:items-center md:justify-between md:mt-14">
-     <div class="heading md:w-5/12">
+     <div class="heading md:w-5/12 lg:w-6/12">
       <div
       class="mt-10"
       v-for="(head, index) in heading"
@@ -10,11 +10,11 @@
       v-show="head.type === 'text'"
     >
       <h2
-        class="text-34 leading-l-30 tracking-a font-bold text-black-01 text-center  md:text-left md:text-42 md:leading-l-40"
+        class="text-34 leading-l-30 tracking-a font-bold text-black-01 text-center  md:text-left md:text-42 md:leading-l-40 lg:text-80 lg:leading-l-77"
       >
         {{ head.title }}
       </h2>
-      <p class="text-16 leading-l-22 mt-4 text-center  md:text-left md:text-18 md:leading-l-22">
+      <p class="text-16 leading-l-22 mt-4 text-center  md:text-left md:text-18 md:leading-l-22 lg:text-20 lg:leading-l-30 lg:w-10/12">
         {{ head.description }}
       </p>
     </div>
@@ -87,8 +87,8 @@
       </div>
     </div>
    </div>
-    <div class="mt-10 mx-auto md:w-6/12">
-      <img :src="image.img" alt=" " class="w-full" />
+    <div class="mt-10 mx-auto md:w-6/12 lg:w-5/12 lg:ml-auto">
+      <img :src="image.img" alt=" "  />
     </div>
   </div>
   </div>

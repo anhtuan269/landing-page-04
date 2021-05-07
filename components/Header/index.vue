@@ -1,6 +1,6 @@
 <template>
-  <div class="header">
-    <div class="flex items-center justify-between max-w-tablet mx-auto pt-10">
+  <div class="header ">
+    <div class="flex items-center justify-between max-w-tablet mx-auto pt-10 1360:max-w-1300 2xl:max-w-1500">
       <div class="w-52" v-for="(item, index) in logo" :key="index">
         <nuxt-link :to="item.link">
           <img :src="item.src" alt="" />

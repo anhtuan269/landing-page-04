@@ -1,5 +1,5 @@
 <template>
-  <div class="card px-10 py-16">
+  <div class="card px-10 py-16 lg:px-0 lg:mx-auto lg:max-w-tablet 1360:max-w-1300 2xl:max-w-1500 ">
     <div class="  lg:flex lg:justify-between lg:items-center">
       <div class="item mb-10" v-for="(card, index) in cards" :key="index">
         <img
@@ -21,10 +21,8 @@
 </template>
 
 <script>
-import Heading from "@/components/Heading";
 export default {
   componets: {
-    Heading,
   },
   data() {
     return {

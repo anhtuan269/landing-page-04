@@ -2,6 +2,7 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+   
     letterSpacing: {
       tightest: '-.075em',
       tighter: '-.05em',
@@ -62,7 +63,9 @@ module.exports = {
         '330': '330px',
       },
       maxWidth: {
-        'tablet': '1070px'
+        'tablet': '1070px',
+        '1300': '1300px',
+        '1500':'1500px'
       },
       padding: {
         '01':'10px',
@@ -95,7 +98,18 @@ module.exports = {
         '80':'5rem',
         '150': '9rem',
         '200':'12.5rem'
-      }
+      },
+      screens: {
+        '1360': '1360px',
+        // => @media (min-width: 640px) { ... }
+  
+        // 'laptop': '1024px',
+        // => @media (min-width: 1024px) { ... }
+  
+        // 'desktop': '1280px',
+        // => @media (min-width: 1280px) { ... }
+        
+      },
     },
   },
   variants: {
